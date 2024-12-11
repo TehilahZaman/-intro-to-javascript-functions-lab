@@ -30,14 +30,14 @@ Complete the exercise in the space below:
 */
 
 function isAdult(age) {
-    if (age >= 18) {
-        return 'Adult';
-    } else {
-        return 'Minor';
-    }
+  if (age >= 18) {
+    return "Adult";
+  } else {
+    return "Minor";
+  }
 }
 
-console.log('Exercise 2 Result:', isAdult(21));
+console.log("Exercise 2 Result:", isAdult(21));
 
 /*
 Exercise 3: isCharAVowel()
@@ -53,14 +53,20 @@ Complete the exercise in the space below:
 */
 
 function isCharAVowel(character) {
-    if (character === 'a' || character === 'e' || character === 'i' || character === 'o' || character === 'u') {
-        return 'True'; 
-    } else {
-        return 'False';
-    }
+  if (
+    character === "a" ||
+    character === "e" ||
+    character === "i" ||
+    character === "o" ||
+    character === "u"
+  ) {
+    return "True";
+  } else {
+    return "False";
+  }
 }
 
-console.log('Exercise 3 Result:', isCharAVowel("a"));
+console.log("Exercise 3 Result:", isCharAVowel("a"));
 
 /*
 Exercise 4: generateEmail()
@@ -75,9 +81,119 @@ Complete the exercise in the space below:
 */
 
 function generateEmail(name, domain) {
-    return `${name}@${domain}`;
+  return `${name}@${domain}`;
 }
 
-console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
+console.log("Exercise 4 Result:", generateEmail("johnsmith", "example.com"));
 
+/*
+Exercise 5: greetUser()
 
+Define a function called greetUser. It should take a name and a 
+time of day (morning, afternoon, evening) and return a personalized 
+greeting.
+
+Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
+
+Complete the exercise in the space below:
+*/
+
+function greetUser(name, time) {
+  return `Good ${time}, ${name}`;
+}
+
+console.log("Exercise 5 Result:", greetUser("Sam", "morning"));
+
+/*
+Exercise 6: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers 
+and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+
+function maxOfThree(x, y, z) {
+  if (x > y && x > z) {
+    return `${x}`;
+  } else if (y > x && y > z) {
+    return `${y}`;
+  } else if (z > x && z > y) {
+    return `&{z}`;
+  }
+}
+
+console.log("Exercise 6 Result:", maxOfThree(5, 10, 8));
+
+/*
+Exercise 7: calculateTip()
+
+Create a function called calculateTip. It should take two arguments: 
+the bill amount and the tip percentage (as a whole number). 
+The function should return the amount of the tip.
+
+Example: calculateTip(50, 20) should return 10.
+
+Complete the exercise in the space below:
+*/
+
+function calculateTip(billTotal, tipPercent) {
+  return billTotal * (tipPercent / 100);
+}
+
+console.log("Exercise 7 Result:", calculateTip(50, 20));
+
+/*
+Exercise 8: convertTemperature()
+
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+function convertTemperature(tempNum, tempType) {
+  if (tempType === "C") {
+    return (tempNum * 9) / 5 + 32;
+  } else if (tempType === "F") {
+    return ((tempNum - 32) * 5) / 9;
+  }
+}
+
+console.log("Exercise 8 Result:", convertTemperature(32, "C"));
+
+/*
+Exercise 9: basicCalculator()
+
+Create a function named basicCalculator. 
+It should take three arguments: two numbers and a string representing 
+an operation ('add', 'subtract', 'multiply', 'divide'). 
+Perform the provided operation on the two numbers. 
+In operations where the order of numbers is important, 
+treat the first parameter as the first operand and the 
+second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+
+function basicCalculator(num1, num2, operation) {}
+
+// console.log("Exercise 9 Result:", basicCalculator(10, 5, "subtract"));
+console.log("Exercise 9 Result:", basicCalculator(800, 400, "divide"));
+
+// delete me !!
+// function calc(num1, num2) {
+//     return num1 divide num2;
+// }
+// console.log(calc(8, 2))
+
+// write out the wholw if return statement for multipy = * etc?
