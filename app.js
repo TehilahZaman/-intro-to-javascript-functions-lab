@@ -1,3 +1,4 @@
+
 /*
 Exercise 1: maxOfTwoNumbers()
 
@@ -275,4 +276,5 @@ function numArgs() {
   }
 
 console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
+
 
