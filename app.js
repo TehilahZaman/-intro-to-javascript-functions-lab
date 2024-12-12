@@ -185,15 +185,94 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-function basicCalculator(num1, num2, operation) {}
+function basicCalculator(num1, num2, operation) {
+  if (operation === 'add') {
+    return num1 + num2;
+  } else if (operation === 'multiply') {
+    return num1 * num2;
+  } else if (operation === 'subtract') {
+    return num1 - num2;
+  } else if (operation === 'divide') {
+    return num1 / num2;
+  } else {
+    return 'Invalid'
+  }
+}
 
-// console.log("Exercise 9 Result:", basicCalculator(10, 5, "subtract"));
-console.log("Exercise 9 Result:", basicCalculator(800, 400, "divide"));
+console.log("Exercise 9 Result:", basicCalculator(10, 5, "subtract"));
 
-// delete me !!
-// function calc(num1, num2) {
-//     return num1 divide num2;
-// }
-// console.log(calc(8, 2))
+/*
+Exercise 10: calculateGrade()
 
-// write out the wholw if return statement for multipy = * etc?
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+function calculateGrade(gradeNum) {
+  if (gradeNum >= 90) {
+    return "A";
+  } else if (89 >= gradeNum)
+    if (gradeNum >= 80) {
+      return "B";
+    } else if (79 >= gradeNum)
+      if (gradeNum >= 70) {
+        return "C";
+      } else if (69 >= gradeNum)
+        if (gradeNum >= 60) {
+          return "D";
+        } else {
+          return 'F'
+        }
+} 
+
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+function createUsername(first, last) {
+
+  let firstSlice = first.slice(0, 3);
+  let lastSlice = last.slice(0, 3);
+  let argValue = first.length + last.length; 
+  return `${firstSlice}${lastSlice}${argValue}`;
+}
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+function numArgs() {
+  return arguments.length; 
+  }
+
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
+
